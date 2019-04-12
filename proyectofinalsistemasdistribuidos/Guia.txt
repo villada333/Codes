@@ -1,0 +1,66 @@
+Daniel Villada Moncada
+
+
+para correr el cliente ejecutar por primera vez esta linea en la terminal de ubuntu:
+sudo apt install python-pymongo
+y ejecutar el programa cliente.py con python 2.7
+python cliente.py
+
+para correr el servidor se necesita tener:
+el robo3t
+la api pymongo: sudo apt install python pymongo
+
+cada que se vaya a ejecutar el servidor primero se ejecuta
+sudo systemctl start mongod
+python server.py
+
+
+-------------------	Instalaciones	-----------------
+
+python 3.6: ---------------
+
+sudo add-apt-repository ppa:jonathonf/python-3.6
+
+sudo apt-get update
+
+sudo apt-get install python3.6
+
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
+
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
+
+sudo update-alternatives --config python3
+
+sudo rm /usr/bin/python3
+
+sudo ln -s python3.5 /usr/bin/python3
+
+python 2.7: ----------------
+
+sudo apt-get install python
+
+mongodb: ----------------
+
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
+
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+
+sudo apt update
+
+sudo apt-get install -y mongodb-org
+
+sudo service mongod start
+
+pymongo:----------------------
+
+sudo apt install python-pymongo
+
+opcionales:
+
+sudo apt-get purge python-pymongo
+sudo pip install pymongo
+
+
+--------------------- Anotaciones -------------------------
+funciona con python 2,7
+la funcion del ingreso de texto se debe de hacer como raw_input()
